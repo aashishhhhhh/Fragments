@@ -30,6 +30,7 @@ public class SimpleFragment extends Fragment {
         // Required empty public constructor
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -76,5 +77,9 @@ public class SimpleFragment extends Fragment {
 
 // Return the View for the fragment's UI.
         return rootView;
+    }
+
+    public static SimpleFragment newInstance() {
+        return new SimpleFragment();
     }
 }
