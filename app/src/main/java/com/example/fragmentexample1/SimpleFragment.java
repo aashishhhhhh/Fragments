@@ -42,12 +42,11 @@ public class SimpleFragment extends Fragment {
                 rootView.findViewById(R.id.ratingBar);
         radioGroup.setOnCheckedChangeListener(new
                                                       RadioGroup.OnCheckedChangeListener() {
-                                                          @Override
-                                                          public void onCheckedChanged(RadioGroup group, int checkedId) {
-                                                              View radioButton = radioGroup.findViewById(checkedId);
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                View radioButton = radioGroup.findViewById(checkedId);
                                                               int index = radioGroup.indexOfChild(radioButton);
-                                                              TextView textView =
-                                                                      rootView.findViewById(R.id.fragment_header);
+                                                              TextView textView = rootView.findViewById(R.id.fragment_header);
                                                               switch (index) {
                                                                   case YES: // User chose "Yes."
                                                                       textView.setText(R.string.yes_message);
@@ -62,7 +61,7 @@ public class SimpleFragment extends Fragment {
                                                           }
                                                       });
         // Set the rating bar onCheckedChanged listener.
-        ratingBar.setOnRatingBarChangeListener
+     /*   ratingBar.setOnRatingBarChangeListener
                 (new RatingBar.OnRatingBarChangeListener() {
                     @Override
                     public void onRatingChanged(RatingBar ratingBar,
@@ -73,7 +72,7 @@ public class SimpleFragment extends Fragment {
                         Toast.makeText(getContext(), myRating,
                                 Toast.LENGTH_SHORT).show();
                     }
-                });
+                });*/
 
 // Return the View for the fragment's UI.
         return rootView;
